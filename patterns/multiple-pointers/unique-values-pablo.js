@@ -3,7 +3,7 @@ function countUniqueValues(arr){
     let i = 0;
     let j = 1;
     
-    if ( !arr || arr.length < 2 ) {
+    if ( arr.length < 1 ) {
       return 0;
     }
     
@@ -11,11 +11,9 @@ function countUniqueValues(arr){
       if ( arr[i] != arr[j] ) {
           i++;
           arr[i] = arr[j];
-          j++;
-      } else {
-        j++;
       }
+      j++;
     }
     
     return i + 1;
-  }
+}
